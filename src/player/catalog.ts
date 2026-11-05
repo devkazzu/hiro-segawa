@@ -1,1 +1,220 @@
+import type { Playlist, Preferences, Theme, Track } from "./types";
 
+export const TRACKS: Track[] = [
+  {
+    id: "raat",
+    title: "Raat Ke Saaye",
+    artist: "RJNX Beats",
+    album: "After Hours",
+    image: "images/anime-boy-moon.jpg",
+    src: "demo:raat",
+    duration: 105,
+    genre: "Lo-fi",
+  },
+  {
+    id: "blossom",
+    title: "Blossom",
+    artist: "Hiro Segawa",
+    album: "Sakura Sessions",
+    image: "images/fox-mask-girl.jpg",
+    src: "demo:blossom",
+    duration: 98,
+    genre: "Chill",
+  },
+  {
+    id: "lost",
+    title: "Lost in You",
+    artist: "Hiro Segawa",
+    album: "Sakura Sessions",
+    image: "images/anime-girl.jpg",
+    src: "demo:lost",
+    duration: 111,
+    genre: "Ambient",
+  },
+  {
+    id: "numb",
+    title: "Numb",
+    artist: "RJNX Beats",
+    album: "After Hours",
+    image: "images/anime-boy-sword.jpg",
+    src: "demo:numb",
+    duration: 93,
+    genre: "Lo-fi",
+  },
+  {
+    id: "kahani",
+    title: "Kahani",
+    artist: "Hiro Segawa",
+    album: "Moonlit Letters",
+    image: "images/visualizer-bg.jpg",
+    src: "demo:kahani",
+    duration: 102,
+    genre: "Chill",
+  },
+  {
+    id: "silent",
+    title: "Silent Heart",
+    artist: "RJNX Beats",
+    album: "Moonlit Letters",
+    image: "images/bg-temple.jpg",
+    src: "demo:silent",
+    duration: 114,
+    genre: "Ambient",
+  },
+  {
+    id: "moonlight",
+    title: "Moonlight Drive",
+    artist: "Hiro Segawa",
+    album: "After Hours",
+    image: "images/bg-moon-lake.jpg",
+    src: "demo:moonlight",
+    duration: 91,
+    genre: "Lo-fi",
+  },
+  {
+    id: "sakura",
+    title: "Sakura Dreams",
+    artist: "Hiro Segawa",
+    album: "Sakura Sessions",
+    image: "images/hero-bg.jpg",
+    src: "demo:sakura",
+    duration: 100,
+    genre: "Chill",
+  },
+];
+
+export const PLAYLISTS: Playlist[] = [
+  {
+    id: "chill",
+    name: "Chill Vibes",
+    description: "Soft beats. Softer nights.",
+    image: "images/bg-moon-lake.jpg",
+    trackIds: ["raat", "blossom", "lost", "sakura"],
+  },
+  {
+    id: "lofi",
+    name: "Lofi Zone",
+    description: "Find your focus, lose the noise.",
+    image: "images/bg-temple.jpg",
+    trackIds: ["numb", "moonlight", "raat", "kahani"],
+  },
+  {
+    id: "night",
+    name: "Night Drive",
+    description: "For the long way home.",
+    image: "images/bg-sunset.jpg",
+    trackIds: ["moonlight", "numb", "silent", "raat", "lost"],
+  },
+  {
+    id: "dream",
+    name: "Sakura Dreams",
+    description: "A little escape, just for you.",
+    image: "images/bg-fuji.jpg",
+    trackIds: ["sakura", "blossom", "silent", "kahani"],
+  },
+];
+
+export const THEMES: Theme[] = [
+  {
+    id: "sakura",
+    name: "Sakura Night",
+    accent: "#f77bdf",
+    soft: "#ffd3ef",
+    image: "images/hero-bg.jpg",
+    filter: "none",
+    description: "Cherry blossoms and a little midnight magic.",
+  },
+  {
+    id: "moonlight",
+    name: "Moonlight",
+    accent: "#75b8ff",
+    soft: "#d4eaff",
+    image: "images/bg-moon-lake.jpg",
+    filter: "hue-rotate(-45deg)",
+    description: "Cool blue skies. A quieter state of mind.",
+  },
+  {
+    id: "cyber",
+    name: "Cyber Purple",
+    accent: "#bb7bff",
+    soft: "#e4caff",
+    image: "images/bg-temple.jpg",
+    filter: "hue-rotate(-15deg) saturate(1.5)",
+    description: "Neon-lit streets and electric dreams.",
+  },
+  {
+    id: "aqua",
+    name: "Aqua Blue",
+    accent: "#52dcdf",
+    soft: "#b6faff",
+    image: "images/bg-fuji.jpg",
+    filter: "hue-rotate(-75deg)",
+    description: "Like a deep breath by the water.",
+  },
+  {
+    id: "sunset",
+    name: "Sunset",
+    accent: "#ffab81",
+    soft: "#ffe0c8",
+    image: "images/bg-sunset.jpg",
+    filter: "none",
+    description: "Stay a little longer in the golden hour.",
+  },
+  {
+    id: "midnight",
+    name: "Midnight",
+    accent: "#9696ff",
+    soft: "#d8d8ff",
+    image: "images/bg-fuji.jpg",
+    filter: "brightness(.7) saturate(.7)",
+    description: "When the world sleeps, the music stays.",
+  },
+  {
+    id: "koi",
+    name: "Koi Red",
+    accent: "#ff717c",
+    soft: "#ffccd3",
+    image: "images/bg-sunset.jpg",
+    filter: "hue-rotate(-25deg) saturate(1.5)",
+    description: "Warm lanterns. A fearless kind of feeling.",
+  },
+  {
+    id: "emerald",
+    name: "Emerald",
+    accent: "#65e0b4",
+    soft: "#baffdf",
+    image: "images/bg-temple.jpg",
+    filter: "hue-rotate(-130deg)",
+    description: "A secret garden, a different rhythm.",
+  },
+];
+
+export const DEFAULT_PREFERENCES: Preferences = {
+  theme: "sakura",
+  petals: true,
+  motion: true,
+  name: "Hiro",
+  volume: 0.65,
+  eqEnabled: true,
+  eqPreset: "Custom",
+  eq: [2, 4, 0, -1, 2, 4, 1],
+  bass: false,
+  spatial: false,
+  normalize: false,
+};
+
+export const EQ_FREQUENCIES = [60, 150, 400, 1000, 2500, 6000, 14000];
+export const EQ_LABELS = ["60", "150", "400", "1K", "2.5K", "6K", "14K"];
+export const EQ_PRESETS: Record<string, number[]> = {
+  Custom: [2, 4, 0, -1, 2, 4, 1],
+  Flat: [0, 0, 0, 0, 0, 0, 0],
+  "Bass Boost": [8, 6, 2, 0, 0, 1, 2],
+  Vocal: [-2, -1, 2, 5, 6, 3, -1],
+  Pop: [2, 4, 1, -2, -1, 3, 4],
+  Rock: [5, 3, -1, -2, 2, 4, 5],
+};
+
+export function formatTime(value: number) {
+  const seconds = Number.isFinite(value) ? Math.max(0, Math.floor(value)) : 0;
+  return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
+}
